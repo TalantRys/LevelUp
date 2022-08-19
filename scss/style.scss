@@ -1,0 +1,686 @@
+// ----------------------ПЕРЕМЕННЫЕ----------------------
+$color-yellow: #D6AD12;
+$color-violet: #561D5A;
+$color-white: #fff;
+$color-black: #000;
+$font-title-size: 48px;
+$font-size: 28px;
+
+// ----------------------ОБНУЛЕНИЕ----------------------
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+button,
+span,
+input {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    letter-spacing: inherit;
+    font-family: inherit;
+}
+
+// ----------------------ЛЕНДИНГ----------------------
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: url(/images/bg-gradient.jpg) center -1800px/300% repeat-y;
+    font-family: 'Alegreya Sans', sans-serif;
+    background-color: darkcyan;
+    font-size: $font-size;
+    line-height: calc(34px/$font-size*100%);
+}
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-button {
+    display: none;
+}
+body::-webkit-scrollbar-thumb {
+    width: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    border: 2px solid darkcyan;
+}
+body::-webkit-scrollbar-track {
+    width: 10px;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    box-sizing: content-box;
+    padding: 0 10px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: $color-yellow;
+    font-weight: 700;
+    font-size: $font-title-size;
+    line-height: calc(77/64*100%);
+}
+
+.button {
+    display: inline-flex;
+    padding: 9px;
+    min-width: 280px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: calc(48/40*100%);
+    background-color: $color-violet;
+    color: $color-yellow;
+    transition: transform .3s ease, box-shadow .3s ease;
+
+    &:hover {
+        box-shadow: 0px 10px #411244;
+        transform: translateY(-10px);
+    }
+}
+
+main {
+    flex: 1 1 auto;
+
+    &>section {
+        padding: 100px 0;
+    }
+}
+
+
+// ----------------------ШАПКА----------------------
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+}
+.header {
+
+    &__container {
+    }
+
+    &__nav {
+        display: flex;
+        height: 60px;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 700;
+    }
+
+    &__logo {
+        color: $color-yellow;
+        font-size: 32px;
+        line-height: calc(38/32*100%);
+        transition: text-shadow .3s ease;
+
+        &:hover {
+            text-shadow: 1px 1px 10px $color-yellow;
+        }
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+
+        li:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__link {
+        color: $color-white;
+        font-size: 16px;
+        line-height: calc(19px/16px*100%);
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 1px;
+            position: absolute;
+            width: 0%;
+            background-color: $color-white;
+            bottom: 0;
+            display: block;
+            transition: width .3s ease;
+        }
+
+        &:hover:before {
+            width: 100%;
+        }
+    }
+}
+
+// ----------------------ШАПКА----------------------
+
+// ----------------------MAIN----------------------
+// ----------------------ПРЕВЬЮ----------------------
+.main-preview {
+    position: relative;
+    min-height: 100vh;
+    padding: 60px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -2;
+
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 1;
+            content: '';
+        }
+
+        video {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__container {}
+
+    &__content {}
+
+    &__title {
+        font-size: 64px;
+    }
+
+    &__body {
+        display: flex;
+        gap: 45px;
+        align-items: center;
+
+        & img {
+            width: 211px;
+        }
+    }
+
+    &__list {
+        list-style-position: inside;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: calc(48/40*100%);
+        color: $color-white;
+
+        & li:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__button {}
+}
+// ----------------------ПРЕВЬЮ----------------------
+
+// ----------------------СОСТАВ----------------------
+
+.main-compound {
+    &__container {
+        max-width: 806px;
+    }
+
+    &__title {}
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__column {
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 70px;
+            }
+
+            &>*:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &-img {
+            border-radius: 100%;
+            border: solid 3px $color-white;
+            width: 132px;
+            height: 132px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                width: 80px;
+            }
+        }
+
+        &-text {
+            width: 70px;
+            text-align: center;
+            font-size: 28px;
+            line-height: calc(34/28*100%);
+            color: $color-white;
+        }
+    }
+
+    &__center {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & img {
+            width: 190px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__lines {}
+
+    &__line {
+        position: absolute;
+        height: 3px;
+        width: 112px;
+        background-color: #fff;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(5),
+        &:nth-child(6) {
+            width: 168px;
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            top: 3%;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            top: 44%;
+            transform: translateY(-50%);
+        }
+
+        &:nth-child(5),
+        &:nth-child(6) {
+            bottom: 15%;
+        }
+
+        &:nth-child(1) {
+            left: -122px;
+            transform: rotate(50deg);
+        }
+
+        &:nth-child(2) {
+            right: -122px;
+            transform: rotate(-50deg);
+        }
+
+        &:nth-child(3) {
+            left: -100px;
+        }
+
+        &:nth-child(4) {
+            right: -100px;
+        }
+
+        &:nth-child(5) {
+            left: -122px;
+            transform: rotate(-50deg);
+        }
+
+        &:nth-child(6) {
+            right: -122px;
+            transform: rotate(50deg);
+        }
+    }
+
+    &__button {}
+
+}
+// ----------------------СОСТАВ----------------------
+
+// ----------------------ОТЗЫВЫ----------------------
+.main-comment {
+
+    &__title {}
+
+    &__container {
+        max-width: 1017px;
+    }
+
+    .swiper {
+        max-width: 857px;
+        overflow: visible;
+
+        &-box {
+            overflow: hidden;
+        }
+
+        &-button-prev,
+        &-button-next {
+            margin: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 100px;
+            transform: translateY(-50%);
+            border: 3px solid $color-white;
+            color: $color-white;
+            &:after,
+            &:after{
+                content: '';
+                background-color: #fff;
+                width: 100%;
+                height: 100%;
+                mask: url(../images/icons/arrow.svg) center/100% no-repeat;
+            }
+        }
+        &-button-prev {
+            left: -80px;
+            &::after{
+                transform: rotate(180deg);
+            }
+        }
+
+        &-button-next {
+            right: -80px;
+        }
+
+        &-pagination {
+            &-bullets {
+                bottom: -60px;
+            }
+
+            &-bullet {
+                width: 24px;
+                height: 24px;
+                background-color: transparent;
+                opacity: 1;
+                border: 3px solid $color-white;
+                &:not(:last-child){
+                    margin-right: 16px;
+                }
+            }
+
+            &-bullet-active {
+                background-color: $color-white;
+            }
+        }
+    }
+
+    &__cards {
+        display: flex;
+    }
+
+    &__card {
+        padding: 40px 20px;
+        max-width: 260px;
+        min-height: 336px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-white;
+
+        &>*:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__card-img {
+        width: 125px;
+        height: 125px;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            display: block;
+            object-fit: cover;
+        }
+    }
+
+    &__card-title,
+    &__card-text {
+        font-size: 20px;
+        line-height: calc(24/20*100%);
+        color: $color-black;
+    }
+
+}
+
+// ----------------------ОТЗЫВЫ----------------------
+
+// ----------------------ПРОДУКТ----------------------
+.main-about {
+    color: $color-white;
+
+    &__title {}
+
+    &__container {
+        max-width: 898px;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 70px;
+
+        & img {
+            width: 437px;
+        }
+    }
+
+    &__text {
+        flex: 0 1 398px;
+        text-align: center;
+
+        & p {
+            font-size: $font-size;
+            line-height: calc(34px/$font-size*100%);
+            text-align: justify;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        & li:not(:last-child) {
+            margin-right: 100px;
+        }
+    }
+
+    &__item {
+        font-size: 48px;
+        line-height: calc(58/48*100%);
+        font-weight: 700;
+    }
+
+    &__button {}
+}
+
+// ----------------------ПРОДУКТ----------------------
+
+// ----------------------ФОРМА------------------------
+.main-order {
+
+    &__title {
+    }
+    &__block &__title {
+        text-align: unset;
+        margin: 0;
+        margin-right: 57px;
+    }
+
+    &__container {
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 90px;
+    }
+
+    &__timer {
+        color: $color-white;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: calc(115/96*100%);
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 124px;
+    }
+
+    &__body-inner {
+        display: flex;
+        &_left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            img{
+                width: 211px;
+                margin-bottom: 26px;
+            }
+        }
+
+        &_right {
+        }
+    }
+
+    &__prices {
+        display: inline-flex;
+        align-items: flex-start;
+    }
+
+    &__price {
+        color: $color-yellow;
+        font-size: 48px;
+        line-height: calc(58/48*100%);
+        animation: text-shadow 5s alternate infinite;
+        &_old {
+            font-size: 32px;
+            line-height: calc(38/32*100%);
+            position: relative;
+            margin-left: 9px;
+            animation: none;
+            &::before{
+                position: absolute;
+                content: "";
+                z-index: 1;
+                height: 3px;
+                background-color: $color-white;
+                top: 50%;
+                left: -5px;
+                right: -5px;
+                transform: translateY(-50%);
+            }
+        }
+        @keyframes text-shadow {
+            0%{
+                text-shadow: -5px 0px 10px #D6AD12;
+            }
+            100%{
+                text-shadow: 5px 0px 10px #D6AD12;
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        &>*:not(:last-child){
+            margin-bottom: 40px;
+        }
+    }
+
+    &__form-title {
+        font-size: 36px;
+        line-height: calc(43/36*100%);
+    }
+    
+    &__form-label{
+        position: relative;
+        span{
+            position: absolute;
+            font-size: 18px;
+            line-height: calc(22/18*100%);
+            right: 0;
+            top: -30px;
+            color: #D0D0D0;
+            display: none;
+        }
+    }
+    &__form-input {
+        width: 100%;
+        border: 3px solid $color-white;
+        border-radius: 10px;
+        color: $color-white;
+        font-size: 24px;
+        line-height: calc(29/24*100%);
+        padding: 10px;
+        position: relative;
+        transition: all .3s ease;
+        &:focus + span{
+            display: block;
+        }
+        &::placeholder{
+            color: $color-white;
+        }
+    }
+    &__form-submit {
+    }
+}
+
+// ----------------------ФОРМА------------------------
+
+// ----------------------MAIN------------------------
+
+// ----------------------ПОДВАЛ------------------------
+
+
+// ----------------------ПОДВАЛ------------------------
