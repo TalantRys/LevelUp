@@ -40,28 +40,33 @@ body {
 }
 
 body {
-    background: url(/images/bg-gradient.jpg) center -1800px/300% repeat-y;
+    background: url(../images/bg-gradient.jpg) center -1800px/300% repeat-y;
     font-family: 'Alegreya Sans', sans-serif;
     background-color: darkcyan;
     font-size: $font-size;
     line-height: calc(34px/$font-size*100%);
 }
+
 body::-webkit-scrollbar {
     width: 10px;
     background-color: transparent;
 }
+
 body::-webkit-scrollbar-button {
     display: none;
 }
+
 body::-webkit-scrollbar-thumb {
     width: 10px;
     background-color: rgb(0, 0, 0);
     border-radius: 100px;
     border: 2px solid darkcyan;
 }
+
 body::-webkit-scrollbar-track {
     width: 10px;
 }
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -120,10 +125,10 @@ header {
     width: 100%;
     background-color: rgba($color: #000000, $alpha: 0.3);
 }
+
 .header {
 
-    &__container {
-    }
+    &__container {}
 
     &__nav {
         display: flex;
@@ -243,6 +248,7 @@ header {
 
     &__button {}
 }
+
 // ----------------------ПРЕВЬЮ----------------------
 
 // ----------------------СОСТАВ----------------------
@@ -373,6 +379,7 @@ header {
     &__button {}
 
 }
+
 // ----------------------СОСТАВ----------------------
 
 // ----------------------ОТЗЫВЫ----------------------
@@ -401,8 +408,9 @@ header {
             transform: translateY(-50%);
             border: 3px solid $color-white;
             color: $color-white;
+
             &:after,
-            &:after{
+            &:after {
                 content: '';
                 background-color: #fff;
                 width: 100%;
@@ -410,9 +418,11 @@ header {
                 mask: url(../images/icons/arrow.svg) center/100% no-repeat;
             }
         }
+
         &-button-prev {
             left: -80px;
-            &::after{
+
+            &::after {
                 transform: rotate(180deg);
             }
         }
@@ -432,7 +442,8 @@ header {
                 background-color: transparent;
                 opacity: 1;
                 border: 3px solid $color-white;
-                &:not(:last-child){
+
+                &:not(:last-child) {
                     margin-right: 16px;
                 }
             }
@@ -544,16 +555,15 @@ header {
 // ----------------------ФОРМА------------------------
 .main-order {
 
-    &__title {
-    }
+    &__title {}
+
     &__block &__title {
         text-align: unset;
         margin: 0;
         margin-right: 57px;
     }
 
-    &__container {
-    }
+    &__container {}
 
     &__block {
         display: flex;
@@ -566,8 +576,342 @@ header {
         color: $color-white;
         font-weight: 700;
         font-size: 96px;
-        line-height: calc(115/96*100%);
+        line-height: 0;
     }
+
+    /* Play with speed and easing of the animation */
+    /* =========================================== */
+    .digit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+
+    .time-part-wrapper {
+        display: inline-flex;
+        position: relative;
+        &:not(:last-child){
+            margin-right: 8px;
+        }
+    }
+
+    .time-part-wrapper:not(:last-child):after {
+        content: ":";
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translatey(-50%);
+        right: -22px;
+        color: #fff;
+    }
+
+    .time-part {
+        width: 46px;
+        text-align: center;
+        height: 100px;
+        overflow: hidden;
+        display: inline-block;
+        margin-left: 0px;
+    }
+
+    .time-part .digit-wrapper {
+        animation-timing-function: cubic-bezier(1, 0, 1, 0);
+    }
+
+    .time-part.minutes.tens .digit-wrapper {
+        animation-name: minutes-tens;
+        animation-duration: 1800s;
+        animation-iteration-count: 1;
+    }
+
+    .time-part.minutes.ones .digit-wrapper {
+        animation-name: minutes-ones;
+        animation-duration: 600s;
+        animation-iteration-count: 3;
+    }
+
+    .time-part.seconds.tens .digit-wrapper {
+        animation-name: seconds-tens;
+        animation-duration: 60s;
+        animation-iteration-count: 30;
+    }
+
+    .time-part.seconds.ones .digit-wrapper {
+        animation-name: seconds-ones;
+        animation-duration: 10s;
+        animation-iteration-count: 180;
+    }
+
+    .time-part.milliseconds.hundreds .digit-wrapper {
+        animation-name: hundredths-tens;
+        animation-duration: 1s;
+        animation-iteration-count: 1800;
+    }
+
+    .time-part.milliseconds.tens .digit-wrapper {
+        animation-name: hundredths-ones;
+        animation-duration: 0.1s;
+        animation-iteration-count: 18000;
+    }
+
+    .time-part.milliseconds.ones .digit-wrapper {
+        animation-name: milliseconds;
+        animation-duration: 0.01s;
+        animation-iteration-count: 180000;
+    }
+
+    @keyframes minutes-tens {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        33.33333% {
+            transform: translateY(-200px);
+        }
+
+        66.66667% {
+            transform: translateY(-300px);
+        }
+    }
+
+    @keyframes minutes-ones {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        10% {
+            transform: translateY(-200px);
+        }
+
+        20% {
+            transform: translateY(-300px);
+        }
+
+        30% {
+            transform: translateY(-400px);
+        }
+
+        40% {
+            transform: translateY(-500px);
+        }
+
+        50% {
+            transform: translateY(-600px);
+        }
+
+        60% {
+            transform: translateY(-700px);
+        }
+
+        70% {
+            transform: translateY(-800px);
+        }
+
+        80% {
+            transform: translateY(-900px);
+        }
+
+        90% {
+            transform: translateY(-1000px);
+        }
+    }
+
+    @keyframes seconds-tens {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        16.66667% {
+            transform: translateY(-200px);
+        }
+
+        33.33333% {
+            transform: translateY(-300px);
+        }
+
+        50% {
+            transform: translateY(-400px);
+        }
+
+        66.66667% {
+            transform: translateY(-500px);
+        }
+
+        83.33333% {
+            transform: translateY(-600px);
+        }
+    }
+
+    @keyframes seconds-ones {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        10% {
+            transform: translateY(-200px);
+        }
+
+        20% {
+            transform: translateY(-300px);
+        }
+
+        30% {
+            transform: translateY(-400px);
+        }
+
+        40% {
+            transform: translateY(-500px);
+        }
+
+        50% {
+            transform: translateY(-600px);
+        }
+
+        60% {
+            transform: translateY(-700px);
+        }
+
+        70% {
+            transform: translateY(-800px);
+        }
+
+        80% {
+            transform: translateY(-900px);
+        }
+
+        90% {
+            transform: translateY(-1000px);
+        }
+    }
+
+    @keyframes hundredths-tens {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        10% {
+            transform: translateY(-200px);
+        }
+
+        20% {
+            transform: translateY(-300px);
+        }
+
+        30% {
+            transform: translateY(-400px);
+        }
+
+        40% {
+            transform: translateY(-500px);
+        }
+
+        50% {
+            transform: translateY(-600px);
+        }
+
+        60% {
+            transform: translateY(-700px);
+        }
+
+        70% {
+            transform: translateY(-800px);
+        }
+
+        80% {
+            transform: translateY(-900px);
+        }
+
+        90% {
+            transform: translateY(-1000px);
+        }
+    }
+
+    @keyframes hundredths-ones {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        10% {
+            transform: translateY(-200px);
+        }
+
+        20% {
+            transform: translateY(-300px);
+        }
+
+        30% {
+            transform: translateY(-400px);
+        }
+
+        40% {
+            transform: translateY(-500px);
+        }
+
+        50% {
+            transform: translateY(-600px);
+        }
+
+        60% {
+            transform: translateY(-700px);
+        }
+
+        70% {
+            transform: translateY(-800px);
+        }
+
+        80% {
+            transform: translateY(-900px);
+        }
+
+        90% {
+            transform: translateY(-1000px);
+        }
+    }
+
+    @keyframes milliseconds {
+        0% {
+            transform: translateY(-100px);
+        }
+
+        10% {
+            transform: translateY(-200px);
+        }
+
+        20% {
+            transform: translateY(-300px);
+        }
+
+        30% {
+            transform: translateY(-400px);
+        }
+
+        40% {
+            transform: translateY(-500px);
+        }
+
+        50% {
+            transform: translateY(-600px);
+        }
+
+        60% {
+            transform: translateY(-700px);
+        }
+
+        70% {
+            transform: translateY(-800px);
+        }
+
+        80% {
+            transform: translateY(-900px);
+        }
+
+        90% {
+            transform: translateY(-1000px);
+        }
+    }
+
+    &-wrapper {}
 
     &__body {
         display: flex;
@@ -578,18 +922,19 @@ header {
 
     &__body-inner {
         display: flex;
+
         &_left {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            img{
+
+            img {
                 width: 211px;
                 margin-bottom: 26px;
             }
         }
 
-        &_right {
-        }
+        &_right {}
     }
 
     &__prices {
@@ -602,13 +947,15 @@ header {
         font-size: 48px;
         line-height: calc(58/48*100%);
         animation: text-shadow 5s alternate infinite;
+
         &_old {
             font-size: 32px;
             line-height: calc(38/32*100%);
             position: relative;
             margin-left: 9px;
             animation: none;
-            &::before{
+
+            &::before {
                 position: absolute;
                 content: "";
                 z-index: 1;
@@ -620,11 +967,13 @@ header {
                 transform: translateY(-50%);
             }
         }
+
         @keyframes text-shadow {
-            0%{
+            0% {
                 text-shadow: -5px 0px 10px #D6AD12;
             }
-            100%{
+
+            100% {
                 text-shadow: 5px 0px 10px #D6AD12;
             }
         }
@@ -633,7 +982,8 @@ header {
     &__form {
         display: flex;
         flex-direction: column;
-        &>*:not(:last-child){
+
+        &>*:not(:last-child) {
             margin-bottom: 40px;
         }
     }
@@ -642,10 +992,11 @@ header {
         font-size: 36px;
         line-height: calc(43/36*100%);
     }
-    
-    &__form-label{
+
+    &__form-label {
         position: relative;
-        span{
+
+        span {
             position: absolute;
             font-size: 18px;
             line-height: calc(22/18*100%);
@@ -655,6 +1006,7 @@ header {
             display: none;
         }
     }
+
     &__form-input {
         width: 100%;
         border: 3px solid $color-white;
@@ -665,15 +1017,17 @@ header {
         padding: 10px;
         position: relative;
         transition: all .3s ease;
-        &:focus + span{
+
+        &:focus+span {
             display: block;
         }
-        &::placeholder{
+
+        &::placeholder {
             color: $color-white;
         }
     }
-    &__form-submit {
-    }
+
+    &__form-submit {}
 }
 
 // ----------------------ФОРМА------------------------
