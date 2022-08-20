@@ -2,380 +2,382 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <div class="header__container container">
-                <nav class="header__nav">
-                    <a href="#main-preview" class="header__logo">LevelUp</a>
-                    <ul class="header__list">
-                        <li><a href="#main-preview" class="header__link">Главная</a></li>
-                        <li><a href="#main-compound" class="header__link">Состав</a></li>
-                        <li><a href="#main-comment" class="header__link">Отзывы</a></li>
-                        <li><a href="#main-about" class="header__link">О продукте</a></li>
-                        <li><a href="#main-order" class="header__link">Форма заказа</a></li>
-                    </ul>
-                </nav>
+  <div class="wrapper">
+    <header>
+      <div class="header__container container">
+        <nav class="header__nav">
+          <a href="#main-preview" class="header__logo">LevelUp</a>
+          <ul class="header__list">
+            <li><a href="#main-preview" class="header__link">Главная</a></li>
+            <li><a href="#main-compound" class="header__link">Состав</a></li>
+            <li><a href="#main-comment" class="header__link">Отзывы</a></li>
+            <li><a href="#main-about" class="header__link">О продукте</a></li>
+            <li><a href="#main-order" class="header__link">Форма заказа</a></li>
+          </ul>
+          <button class="header__burger"></button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="main-preview" class="main-preview">
+        <div class="main-preview__video">
+          <video preload="auto" poster="images/preview-img.jpg" muted loop autoplay>
+            <source type="video/mp4" src="images/preview-video.mp4">
+          </video>
+        </div>
+        <div class="main-preview__container container">
+          <div class="main-preview__content">
+            <h2 class="main-preview__title title">
+              LevelUp
+            </h2>
+            <div class="main-preview__body">
+              <img src="images/product.png" alt="product.png">
+              <ol class="main-preview__list">
+                <li>Первый пункт</li>
+                <li>Второй пункт</li>
+                <li>Третий пункт</li>
+                </оl>
+                <a href="#main-order" class="main-preview__button button">Заказать</a>
             </div>
-        </header>
-        <main>
-            <section id="main-preview" class="main-preview">
-                <div class="main-preview__video">
-                    <video preload="auto" poster="images/preview-img.jpg" muted loop autoplay>
-                        <source type="video/mp4" src="images/preview-video.mp4">
-                    </video>
-                </div>
-                <div class="main-preview__container container">
-                    <div class="main-preview__content">
-                        <h2 class="main-preview__title title">
-                            LevelUp
-                        </h2>
-                        <div class="main-preview__body">
-                            <img src="images/product.png" alt="product.png">
-                            <ol class="main-preview__list">
-                                <li>Первый пункт</li>
-                                <li>Второй пункт</li>
-                                <li>Третий пункт</li>
-                                </оl>
-                                <a href="#main-order" class="main-preview__button button">Заказать</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="main-compound" class="main-compound">
-                <h2 class="main-compound__title title">Состав</h2>
-                <div class="main-compound__container container">
-                    <div class="main-compound__body">
-                        <div class="main-compound__column">
-                            <div class="main-compound__column-item">
-                                <span class="main-compound__column-img">
-                                    <img src="images/icons/Star-1.svg" alt="Star-1.svg">
-                                </span>
-                                <p class="main-compound__column-text">Lorem input</p>
-                            </div>
-                            <div class="main-compound__column-item">
-                                <span class="main-compound__column-img">
-                                    <img src="images/icons/Star-2.svg" alt="Star-2.svg">
-                                </span>
-                                <p class="main-compound__column-text">Lorem input</p>
-                            </div>
-                            <div class="main-compound__column-item">
-                                <span class="main-compound__column-img">
-                                    <img src="images/icons/Star-3.svg" alt="Star-3.svg">
-                                </span>
-                                <p class="main-compound__column-text">Lorem input</p>
-                            </div>
-                        </div>
-
-                        <div class="main-compound__center">
-
-                            <div class="main-compound__lines">
-                                <hr class="main-compound__line">
-                                <hr class="main-compound__line">
-                                <hr class="main-compound__line">
-                                <hr class="main-compound__line">
-                                <hr class="main-compound__line">
-                                <hr class="main-compound__line">
-                            </div>
-                            <img src="images/product.png" alt="product.png">
-                            <a href="#main-order" class="main-compound__button button">Заказать</a>
-
-                        </div>
-
-                        <div class="main-compound__column">
-                            <div class="main-compound__column-item">
-                                <span class="main-compound__column-img">
-                                    <img src="images/icons/Star-4.svg" alt="Star-4.svg">
-                                </span>
-                                <p class="main-compound__column-text">Lorem input</p>
-                            </div>
-                            <div class="main-compound__column-item">
-                                <span class="main-compound__column-img">
-                                    <img src="images/icons/Star-5.svg" alt="Star-5.svg">
-                                </span>
-                                <p class="main-compound__column-text">Lorem input</p>
-                            </div>
-                            <div class="main-compound__column-item">
-                                <span class="main-compound__column-img">
-                                    <img src="images/icons/Star-6.svg" alt="Star-6.svg">
-                                </span>
-                                <p class="main-compound__column-text">Lorem input</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="main-comment" class="main-comment">
-                <h2 class="main-comment__title title">Отзывы</h2>
-                <div class="main-comment__container container">
-                    <div class="swiper">
-                        <div class="swiper-box">
-                            <div class="swiper-wrapper main-comment__cards">
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-1.jpg" alt="avatar-1.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Никита</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-2.jpg" alt="avatar-2.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Алексей</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-3.jpg" alt="avatar-3.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Григорий</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-1.jpg" alt="avatar-1.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Никита</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-2.jpg" alt="avatar-2.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Алексей</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-3.jpg" alt="avatar-3.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Григорий</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-1.jpg" alt="avatar-1.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Никита</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-2.jpg" alt="avatar-2.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Алексей</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                <div class="swiper-slide main-comment__card">
-                                    <span class="main-comment__card-img">
-                                        <img src="images/avatar-3.jpg" alt="avatar-3.jpg">
-                                    </span>
-                                    <h4 class="main-comment__card-title title">Григорий</h4>
-                                    <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
-                                        elit.
-                                    </p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-
-            </section>
-            <section id="main-about" class="main-about">
-                <h2 class="main-about__title title">О продукте</h2>
-                <div class="main-about__container container">
-                    <div class="main-about__body">
-                        <img src="images/doctor.png" alt="doctor.png">
-                        <div class="main-about__text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
-                                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                consequat. Duis autem vel eum iriure dolor in hendrerit in
-                            </p>
-                            <a href="#main-order" class="main-about__button button">Заказать</a>
-                        </div>
-                    </div>
-                    <ul class="main-about__list">
-                        <li>
-                            <p class="main-about__item">Первая</p>
-                        </li>
-                        <li>
-                            <p class="main-about__item">Вторая</p>
-                        </li>
-                        <li>
-                            <p class="main-about__item">Третья</p>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section id="main-order" class="main-order">
-                <h2 class="main-order__title title">LevelUp</h2>
-                <div class="main-order__container container">
-                    <span class="main-order__block">
-                        <h2 class="main-order__title title">Успейте купить!</h2>
-                        <span class="main-order__timer">
-                            <div class='main-order__timer-wrapper'>
-                                <div class='time-part-wrapper'>
-                                  <div class='time-part minutes tens'>
-                                    <div class='digit-wrapper'>
-                                      <span class='digit'>0</span>
-                                      <span class='digit'>2</span>
-                                      <span class='digit'>1</span>
-                                      <span class='digit'>0</span>
-                                    </div>
-                                  </div>
-                                  <div class='time-part minutes ones'>
-                                    <div class='digit-wrapper'>
-                                      <span class='digit'>0</span>
-                                      <span class='digit'>9</span>
-                                      <span class='digit'>8</span>
-                                      <span class='digit'>7</span>
-                                      <span class='digit'>6</span>
-                                      <span class='digit'>5</span>
-                                      <span class='digit'>4</span>
-                                      <span class='digit'>3</span>
-                                      <span class='digit'>2</span>
-                                      <span class='digit'>1</span>
-                                      <span class='digit'>0</span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class='time-part-wrapper'>
-                                  <div class='time-part seconds tens'>
-                                    <div class='digit-wrapper'>
-                                      <span class='digit'>0</span>
-                                      <span class='digit'>5</span>
-                                      <span class='digit'>4</span>
-                                      <span class='digit'>3</span>
-                                      <span class='digit'>2</span>
-                                      <span class='digit'>1</span>
-                                      <span class='digit'>0</span>
-                                    </div>
-                                  </div>
-                                  <div class='time-part seconds ones'>
-                                    <div class='digit-wrapper'>
-                                      <span class='digit'>0</span>
-                                      <span class='digit'>9</span>
-                                      <span class='digit'>8</span>
-                                      <span class='digit'>7</span>
-                                      <span class='digit'>6</span>
-                                      <span class='digit'>5</span>
-                                      <span class='digit'>4</span>
-                                      <span class='digit'>3</span>
-                                      <span class='digit'>2</span>
-                                      <span class='digit'>1</span>
-                                      <span class='digit'>0</span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class='time-part-wrapper'>
-                                  <div class='time-part milliseconds tens'>
-                                    <div class='digit-wrapper'>
-                                      <span class='digit'>0</span>
-                                      <span class='digit'>9</span>
-                                      <span class='digit'>8</span>
-                                      <span class='digit'>7</span>
-                                      <span class='digit'>6</span>
-                                      <span class='digit'>5</span>
-                                      <span class='digit'>4</span>
-                                      <span class='digit'>3</span>
-                                      <span class='digit'>2</span>
-                                      <span class='digit'>1</span>
-                                      <span class='digit'>0</span>
-                                    </div>
-                                  </div>
-                                  <div class='time-part milliseconds ones'>
-                                    <div class='digit-wrapper'>
-                                      <span class='digit'>0</span>
-                                      <span class='digit'>9</span>
-                                      <span class='digit'>8</span>
-                                      <span class='digit'>7</span>
-                                      <span class='digit'>6</span>
-                                      <span class='digit'>5</span>
-                                      <span class='digit'>4</span>
-                                      <span class='digit'>3</span>
-                                      <span class='digit'>2</span>
-                                      <span class='digit'>1</span>
-                                      <span class='digit'>0</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                                                            
-                        </span>
-                    </span>
-                    <div class="main-order__body">
-                        <div class="main-order__body-inner_left">
-                            <img src="images/product.png" alt="product.png">
-                            <div class="main-order__prices">
-                                <h5 class="main-order__price">1000 р.</h5>
-                                <h5 class="main-order__price main-order__price_old">2000 p.</h5>
-                            </div>
-                        </div>
-                        <div class="main-order__body-inner_right">
-                            <form class="main-order__form" action="" method="post">
-                                <h4 class="main-order__form-title title">Заполните форму</h4>
-                                <label class="main-order__form-label" for="form-input">
-                                    <input class="main-order__form-input" type="text" placeholder="Имя" name="name" id="form-input">
-                                    <span>Пример: Саша</span>
-                                </label>
-                                <label class="main-order__form-label" for="form-input">
-                                    <input class="main-order__form-input" type="tel" placeholder="Номер телефона" name="number" id="form-input">
-                                    <span>Пример: +71234567890</span>
-                                </label>
-                                <input class="main-order__form-submit button" type="submit" value="Заказать">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="header__container container">
-                <nav class="header__nav">
-                    <a href="#main-preview" class="header__logo">LevelUp</a>
-                    <ul class="header__list">
-                        <li><a href="#main-preview" class="header__link">Главная</a></li>
-                        <li><a href="#main-compound" class="header__link">Состав</a></li>
-                        <li><a href="#main-comment" class="header__link">Отзывы</a></li>
-                        <li><a href="#main-about" class="header__link">О продукте</a></li>
-                        <li><a href="#main-order" class="header__link">Форма заказа</a></li>
-                    </ul>
-                </nav>
+          </div>
+        </div>
+      </section>
+      <section id="main-compound" class="main-compound">
+        <h2 class="main-compound__title title">Состав</h2>
+        <div class="main-compound__container container">
+          <div class="main-compound__body">
+            <div class="main-compound__column">
+              <div class="main-compound__column-item">
+                <span class="main-compound__column-img">
+                  <img src="images/icons/Star-1.svg" alt="Star-1.svg">
+                </span>
+                <p class="main-compound__column-text">Lorem input</p>
+              </div>
+              <div class="main-compound__column-item">
+                <span class="main-compound__column-img">
+                  <img src="images/icons/Star-2.svg" alt="Star-2.svg">
+                </span>
+                <p class="main-compound__column-text">Lorem input</p>
+              </div>
+              <div class="main-compound__column-item">
+                <span class="main-compound__column-img">
+                  <img src="images/icons/Star-3.svg" alt="Star-3.svg">
+                </span>
+                <p class="main-compound__column-text">Lorem input</p>
+              </div>
             </div>
-        </footer>
-    </div>
+
+            <div class="main-compound__center">
+
+              <div class="main-compound__lines">
+                <hr class="main-compound__line">
+                <hr class="main-compound__line">
+                <hr class="main-compound__line">
+                <hr class="main-compound__line">
+                <hr class="main-compound__line">
+                <hr class="main-compound__line">
+              </div>
+              <img src="images/product.png" alt="product.png">
+              <a href="#main-order" class="main-compound__button button">Заказать</a>
+
+            </div>
+
+            <div class="main-compound__column">
+              <div class="main-compound__column-item">
+                <span class="main-compound__column-img">
+                  <img src="images/icons/Star-4.svg" alt="Star-4.svg">
+                </span>
+                <p class="main-compound__column-text">Lorem input</p>
+              </div>
+              <div class="main-compound__column-item">
+                <span class="main-compound__column-img">
+                  <img src="images/icons/Star-5.svg" alt="Star-5.svg">
+                </span>
+                <p class="main-compound__column-text">Lorem input</p>
+              </div>
+              <div class="main-compound__column-item">
+                <span class="main-compound__column-img">
+                  <img src="images/icons/Star-6.svg" alt="Star-6.svg">
+                </span>
+                <p class="main-compound__column-text">Lorem input</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="main-comment" class="main-comment">
+        <h2 class="main-comment__title title">Отзывы</h2>
+        <div class="main-comment__container container">
+          <div class="swiper">
+            <div class="swiper-box">
+              <div class="swiper-wrapper main-comment__cards">
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-1.jpg" alt="avatar-1.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Никита</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-2.jpg" alt="avatar-2.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Алексей</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-3.jpg" alt="avatar-3.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Григорий</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-1.jpg" alt="avatar-1.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Никита</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-2.jpg" alt="avatar-2.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Алексей</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-3.jpg" alt="avatar-3.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Григорий</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-1.jpg" alt="avatar-1.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Никита</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-2.jpg" alt="avatar-2.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Алексей</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+                <div class="swiper-slide main-comment__card">
+                  <span class="main-comment__card-img">
+                    <img src="images/avatar-3.jpg" alt="avatar-3.jpg">
+                  </span>
+                  <h4 class="main-comment__card-title title">Григорий</h4>
+                  <p class="main-comment__card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing
+                    elit.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+      </section>
+      <section id="main-about" class="main-about">
+        <h2 class="main-about__title title">О продукте</h2>
+        <div class="main-about__container container">
+          <div class="main-about__body">
+            <img src="images/doctor.png" alt="doctor.png">
+            <div class="main-about__text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                consequat. Duis autem vel eum iriure dolor in hendrerit in
+              </p>
+              <a href="#main-order" class="main-about__button button">Заказать</a>
+            </div>
+          </div>
+          <ul class="main-about__list">
+            <li>
+              <p class="main-about__item">Первая</p>
+            </li>
+            <li>
+              <p class="main-about__item">Вторая</p>
+            </li>
+            <li>
+              <p class="main-about__item">Третья</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="main-order" class="main-order">
+        <h2 class="main-order__title title">LevelUp</h2>
+        <div class="main-order__container container">
+          <span class="main-order__block">
+            <h2 class="main-order__title title">Успейте купить!</h2>
+            <div class="main-order__timer">
+              <div class='main-order__timer-wrapper'>
+                <div class='time-part-wrapper'>
+                  <div class='time-part minutes tens'>
+                    <div class='digit-wrapper'>
+                      <span class='digit'>0</span>
+                      <span class='digit'>2</span>
+                      <span class='digit'>1</span>
+                      <span class='digit'>0</span>
+                    </div>
+                  </div>
+                  <div class='time-part minutes ones'>
+                    <div class='digit-wrapper'>
+                      <span class='digit'>0</span>
+                      <span class='digit'>9</span>
+                      <span class='digit'>8</span>
+                      <span class='digit'>7</span>
+                      <span class='digit'>6</span>
+                      <span class='digit'>5</span>
+                      <span class='digit'>4</span>
+                      <span class='digit'>3</span>
+                      <span class='digit'>2</span>
+                      <span class='digit'>1</span>
+                      <span class='digit'>0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class='time-part-wrapper'>
+                  <div class='time-part seconds tens'>
+                    <div class='digit-wrapper'>
+                      <span class='digit'>0</span>
+                      <span class='digit'>5</span>
+                      <span class='digit'>4</span>
+                      <span class='digit'>3</span>
+                      <span class='digit'>2</span>
+                      <span class='digit'>1</span>
+                      <span class='digit'>0</span>
+                    </div>
+                  </div>
+                  <div class='time-part seconds ones'>
+                    <div class='digit-wrapper'>
+                      <span class='digit'>0</span>
+                      <span class='digit'>9</span>
+                      <span class='digit'>8</span>
+                      <span class='digit'>7</span>
+                      <span class='digit'>6</span>
+                      <span class='digit'>5</span>
+                      <span class='digit'>4</span>
+                      <span class='digit'>3</span>
+                      <span class='digit'>2</span>
+                      <span class='digit'>1</span>
+                      <span class='digit'>0</span>
+                    </div>
+                  </div>
+                </div>
+                <div class='time-part-wrapper'>
+                  <div class='time-part milliseconds tens'>
+                    <div class='digit-wrapper'>
+                      <span class='digit'>0</span>
+                      <span class='digit'>9</span>
+                      <span class='digit'>8</span>
+                      <span class='digit'>7</span>
+                      <span class='digit'>6</span>
+                      <span class='digit'>5</span>
+                      <span class='digit'>4</span>
+                      <span class='digit'>3</span>
+                      <span class='digit'>2</span>
+                      <span class='digit'>1</span>
+                      <span class='digit'>0</span>
+                    </div>
+                  </div>
+                  <div class='time-part milliseconds ones'>
+                    <div class='digit-wrapper'>
+                      <span class='digit'>0</span>
+                      <span class='digit'>9</span>
+                      <span class='digit'>8</span>
+                      <span class='digit'>7</span>
+                      <span class='digit'>6</span>
+                      <span class='digit'>5</span>
+                      <span class='digit'>4</span>
+                      <span class='digit'>3</span>
+                      <span class='digit'>2</span>
+                      <span class='digit'>1</span>
+                      <span class='digit'>0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </span>
+          <div class="main-order__body">
+            <div class="main-order__body-inner_left">
+              <img src="images/product.png" alt="product.png">
+              <div class="main-order__prices">
+                <h5 class="main-order__price">1000 р.</h5>
+                <h5 class="main-order__price main-order__price_old">2000 p.</h5>
+              </div>
+            </div>
+            <div class="main-order__body-inner_right">
+              <form class="main-order__form" id="form" action="#" method="post">
+                <h4 class="main-order__form-title title">Заполните форму</h4>
+                <label class="main-order__form-label" for="form-name">
+                  <input class="main-order__form-input" type="text" placeholder="Имя" name="name" id="form-name"
+                    data-reg="^[А-ЯЁ][а-яё]*$">
+                  <span>Пример: Саша</span>
+                </label>
+                <label class="main-order__form-label" for="form-number">
+                  <input class="main-order__form-input" type="tel" placeholder="Номер телефона" name="number"
+                    id="form-number" data-reg="^((\+7)+([0-9]){10})$">
+                  <span>Пример: +71234567890</span>
+                </label>
+                <input class="main-order__form-submit button" type="submit" id="form-submit" value="Заказать">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container container">
+        <nav class="footer__nav">
+          <a href="#main-preview" class="footer__logo">LevelUp</a>
+          <ul class="footer__list">
+            <li><a href="#main-preview" class="footer__link">Главная</a></li>
+            <li><a href="#main-compound" class="footer__link">Состав</a></li>
+            <li><a href="#main-comment" class="footer__link">Отзывы</a></li>
+            <li><a href="#main-about" class="footer__link">О продукте</a></li>
+            <li><a href="#main-order" class="footer__link">Форма заказа</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
