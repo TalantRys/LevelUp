@@ -331,6 +331,7 @@ header {
 .main-preview__list li:not(:last-child) {
   margin-bottom: 16px;
 }
+
 @media (max-width: 767px) {
   .main-preview__title {
     font-size: 54px;
@@ -479,6 +480,7 @@ header {
       -ms-transform: rotate(50deg);
           transform: rotate(50deg);
 }
+
 @media (max-width: 768px) {
   .main-compound__body {
     max-width: 555px;
@@ -808,6 +810,7 @@ header {
   line-height: 120.8333333333%;
   font-weight: 700;
 }
+
 @media (max-width: 926px) {
   .main-about__body img {
     width: 337px;
@@ -1648,6 +1651,7 @@ header {
 .main-order__form-input::placeholder {
   color: #fff;
 }
+
 @media (max-width: 767px) {
   .main-order__block {
     margin-bottom: 70px;

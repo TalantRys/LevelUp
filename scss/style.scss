@@ -165,10 +165,11 @@ main {
 }
 
 @include max-w-767 {
-  .title{
+  .title {
     font-size: 38px;
     margin-bottom: 30px;
   }
+
   .button {
     min-width: 180px;
     font-size: 30px;
@@ -253,7 +254,6 @@ header {
 }
 
 @include max-w-575 {
-  header {}
 
   .header {
     &__logo {
@@ -297,13 +297,15 @@ header {
   }
 
 }
-@include max-w-486{
-  .header{
-    &__nav{
+
+@include max-w-486 {
+  .header {
+    &__nav {
       height: 50px;
     }
   }
 }
+
 // ----------------------ШАПКА----------------------
 
 // ----------------------MAIN----------------------
@@ -340,9 +342,7 @@ header {
     }
   }
 
-  &__container {}
 
-  &__content {}
 
   &__title {
     font-size: 64px;
@@ -370,31 +370,33 @@ header {
     }
   }
 
-  &__button {}
 }
 
 @include max-w-767 {
-  .main-preview{
-    &__title{
+  .main-preview {
+    &__title {
       font-size: 54px;
     }
-    &__body{
-      img{
+
+    &__body {
+      img {
         width: 150px;
       }
     }
-    &__list{
+
+    &__list {
       font-size: 27px;
     }
   }
 }
 
 @include max-w-424 {
-  .main-preview{
-    &__title{
+  .main-preview {
+    &__title {
       font-size: 44px;
     }
-    &__body{
+
+    &__body {
       flex-direction: column;
       gap: 20px;
     }
@@ -409,7 +411,6 @@ header {
     max-width: 806px;
   }
 
-  &__title {}
 
   &__body {
     display: flex;
@@ -467,7 +468,6 @@ header {
     }
   }
 
-  &__lines {}
 
   &__line {
     position: absolute;
@@ -527,23 +527,19 @@ header {
     }
   }
 
-  &__button {}
 
 }
 
 @media (max-width:768px) {
   .main-compound {
 
-    &__title {}
 
-    &__container {}
 
     &__body {
       max-width: 555px;
       margin: 0 auto;
     }
 
-    &__column {}
 
     &__column-item {
       &:not(:last-child) {
@@ -559,7 +555,6 @@ header {
       width: 100px;
       height: 100px;
 
-      img {}
     }
 
     &__column-text {
@@ -573,7 +568,6 @@ header {
       }
     }
 
-    &__lines {}
 
     &__line {
       width: 70px;
@@ -639,55 +633,58 @@ header {
 }
 
 @include max-w-486 {
-  .main-compound{
-    &__body{
+  .main-compound {
+    &__body {
       flex-direction: column;
     }
-    &__column{
+
+    &__column {
       display: flex;
       column-gap: 15px;
-      &-item{
 
-      }
-      &-img{
-        
-      }
+
     }
-    &__column:nth-child(1){
+
+    &__column:nth-child(1) {
       order: 1;
     }
-    &__center{
+
+    &__center {
       margin-bottom: 30px;
       order: 0;
-      img{
+
+      img {
         margin-bottom: 30px;
       }
     }
-    &__column:nth-child(3){
+
+    &__column:nth-child(3) {
       order: 2;
     }
-    &__lines{
+
+    &__lines {
       display: none;
     }
   }
 }
+
 @media (max-width:362px) {
-  .main-compound{
-    &__column{
-      &-img{
+  .main-compound {
+    &__column {
+      &-img {
         width: 80px;
         height: 80px;
       }
     }
   }
 }
+
 // ----------------------СОСТАВ----------------------
 
 // ----------------------ОТЗЫВЫ----------------------
 .main-comment {
   padding-bottom: 160px;
 
-  &__title {}
 
   &__container {
     max-width: 1017px;
@@ -711,7 +708,7 @@ header {
       border: 3px solid $color-white;
       color: $color-white;
 
-      &:after{
+      &:after {
         content: '';
         background-color: #fff;
         width: 100%;
@@ -744,7 +741,8 @@ header {
         opacity: 1;
         border: 3px solid $color-white;
         margin: 0 !important;
-        &:not(:last-child){
+
+        &:not(:last-child) {
           margin: 0 16px 0 0 !important;
         }
       }
@@ -794,85 +792,96 @@ header {
     line-height: calc(24/20*100%);
     color: $color-black;
   }
-  &__card-text{
+
+  &__card-text {
     text-align: justify;
   }
 }
-@include max-w-1200{
-  .main-comment{
-    .swiper{
-      &-button-prev{
+
+@include max-w-1200 {
+  .main-comment {
+    .swiper {
+      &-button-prev {
         left: -60px;
       }
-      &-button-next{
+
+      &-button-next {
         right: -60px;
       }
     }
   }
 }
-@include max-w-992{
-  .main-comment{
-    .swiper{
+
+@include max-w-992 {
+  .main-comment {
+    .swiper {
       max-width: 700px;
     }
 
   }
 }
+
 @media (max-width:830px) {
-  .main-comment{
-    .swiper{
+  .main-comment {
+    .swiper {
       max-width: 400px;
     }
-    &__card-text{
+
+    &__card-text {
       font-size: 17px;
     }
   }
 }
-@include max-w-575{
-  .main-comment{
-    .swiper{
+
+@include max-w-575 {
+  .main-comment {
+    .swiper {
       max-width: 260px;
+
       &-pagination {
-        &-bullets {
-        }
-  
+
         &-bullet {
           width: 16px;
           height: 16px;
-          &:not(:last-child){
+
+          &:not(:last-child) {
             margin: 0 7px 0 0 !important;
           }
-          
+
         }
       }
     }
   }
 }
-@include max-w-424{
-  .main-comment{
-    .swiper{
+
+@include max-w-424 {
+  .main-comment {
+    .swiper {
       max-width: 200px;
-      &-button-prev{
+
+      &-button-prev {
         left: -50px;
       }
-      &-button-next{
+
+      &-button-next {
         right: -50px;
       }
     }
-    &__card{
+
+    &__card {
       padding-left: 8px;
       padding-right: 8px;
     }
   }
 
 }
+
 // ----------------------ОТЗЫВЫ----------------------
 
 // ----------------------ПРОДУКТ----------------------
 .main-about {
   color: $color-white;
 
-  &__title {}
 
   &__container {
     max-width: 898px;
@@ -916,75 +925,88 @@ header {
     font-weight: 700;
   }
 
-  &__button {}
 }
-@include max-w-926{
-  .main-about{
-    &__body{
-      img{
+
+@include max-w-926 {
+  .main-about {
+    &__body {
+      img {
         width: 337px;
       }
     }
-    &__text{
+
+    &__text {
       flex: 0 1 300px;
-      p{
+
+      p {
         font-size: 22px;
       }
     }
   }
 }
-@include max-w-767{
-  .main-about{
-    &__body{
-      img{
+
+@include max-w-767 {
+  .main-about {
+    &__body {
+      img {
         width: 230px;
       }
     }
-    &__text{
+
+    &__text {
       flex: 0 1 220px;
-      p{
+
+      p {
         font-size: 17px;
       }
     }
-    &__list{
-        column-gap: 50px;
-        row-gap: 10px;
-      
+
+    &__list {
+      column-gap: 50px;
+      row-gap: 10px;
+
     }
-    &__item{
+
+    &__item {
       font-size: 38px;
     }
   }
 }
-@include max-w-486{
-  .main-about{
-    &__container{
+
+@include max-w-486 {
+  .main-about {
+    &__container {
       max-width: 280px;
     }
-    &__body{
+
+    &__body {
       flex-direction: column;
       margin-bottom: 40px;
     }
-    &__text{
+
+    &__text {
       flex: unset;
-      p{
+
+      p {
         margin-bottom: 20px;
       }
     }
-    &__list{
-        column-gap: 16px;
-      p{
+
+    &__list {
+      column-gap: 16px;
+
+      p {
         font-size: 28px;
       }
     }
   }
 }
+
 // ----------------------ПРОДУКТ----------------------
 
 // ----------------------ФОРМА------------------------
 .main-order {
 
-  &__title {}
 
   &__block &__title {
     text-align: unset;
@@ -992,7 +1014,6 @@ header {
     margin-right: 30px;
   }
 
-  &__container {}
 
   &__block {
     display: flex;
@@ -1343,7 +1364,6 @@ header {
     }
   }
 
-  &-wrapper {}
 
   &__body {
     display: flex;
@@ -1366,7 +1386,6 @@ header {
       }
     }
 
-    &_right {}
   }
 
   &__prices {
@@ -1463,86 +1482,100 @@ header {
     }
   }
 
-  &__form-submit {}
 }
-@include max-w-767{
-  .main-order{
-    &__block{
+
+@include max-w-767 {
+  .main-order {
+    &__block {
       margin-bottom: 70px;
     }
-    &__block &__title{
+
+    &__block &__title {
       margin-right: 18px;
     }
-    
-    &__timer{
+
+    &__timer {
       font-size: 72px;
-      .time-part{
+
+      .time-part {
         width: 36px;
-        &-wrapper{
-          &:not(:last-child){
+
+        &-wrapper {
+          &:not(:last-child) {
             margin-right: 4px;
           }
-          &:not(:last-child):after{
+
+          &:not(:last-child):after {
             right: -16px;
           }
-        } 
+        }
       }
     }
-    &__body{
+
+    &__body {
       gap: 60px;
-      &-inner_left{
-        img{
+
+      &-inner_left {
+        img {
           width: 171px;
         }
       }
     }
-    &__prices{
 
-    }
-    &__price{
+
+    &__price {
       font-size: 40px;
-      &_old{
+
+      &_old {
         font-size: 24px;
       }
     }
-    &__form{
-      &-input{
+
+    &__form {
+      &-input {
         font-size: 20px;
       }
     }
   }
 }
-@include max-w-575{
-  .main-order{
-    &__block{
+
+@include max-w-575 {
+  .main-order {
+    &__block {
       flex-direction: column;
       margin-bottom: 40px;
     }
-    &__block &__title{
+
+    &__block &__title {
       margin-right: 0;
       margin-bottom: 10px;
     }
-    &__body{
+
+    &__body {
       flex-direction: column;
       gap: 30px;
-      &-inner_left{
+
+      &-inner_left {
         align-items: center;
-        img{
+
+        img {
           width: 140px;
         }
       }
     }
   }
 }
-@include max-w-424{
-  .main-order{
-    
-    &__form{
-      &>*:not(:last-child){
+
+@include max-w-424 {
+  .main-order {
+
+    &__form {
+      &>*:not(:last-child) {
         margin-bottom: 25px;
       }
-      &-input{
-        &:focus + span{
+
+      &-input {
+        &:focus+span {
           top: -25px;
           font-size: 16px;
         }
@@ -1550,14 +1583,16 @@ header {
     }
   }
 }
+
 // ----------------------ФОРМА------------------------
 
 // ----------------------MAIN------------------------
 
 // ----------------------ПОДВАЛ------------------------
-footer{
+footer {
   margin-top: 100px;
 }
+
 .footer {
 
   &__nav {
@@ -1611,6 +1646,7 @@ footer{
     }
   }
 }
+
 @include max-w-575 {
   .footer {
     &__logo {
@@ -1658,40 +1694,48 @@ footer{
 }
 
 // ----------------------ПОДВАЛ------------------------
-@include max-w-767{
+@include max-w-767 {
   main {
     &>section {
       padding: 50px 0;
     }
   }
-  .main-preview{
+
+  .main-preview {
     margin-bottom: 50px;
   }
-  .main-comment{
+
+  .main-comment {
     padding-bottom: 100px;
   }
-  footer{
+
+  footer {
     margin-top: 50px;
   }
 }
-@include max-w-486{
-  .main-comment{
+
+@include max-w-486 {
+  .main-comment {
     padding-bottom: 86px;
   }
 }
-@include max-w-424{
+
+@include max-w-424 {
   main {
     &>section {
       padding: 30px 0;
     }
   }
-  .main-preview{
+
+  .main-preview {
     margin-bottom: 30px;
   }
-  .main-comment{
+
+  .main-comment {
     padding-bottom: 66px;
   }
-  footer{
+
+  footer {
     margin-top: 30px;
   }
 }
