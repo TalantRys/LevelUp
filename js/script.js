@@ -39,6 +39,14 @@ burger.addEventListener('click', function(){
     burger.classList.toggle('close');
     list.classList.toggle('burger-active');
 });
+const listLink = document.querySelectorAll('.header__list .header__link');
+listLink.forEach((link)=> {
+    link.addEventListener('click', function () {
+        burgerBody.classList.remove('lock');
+        burger.classList.remove('close');
+        list.classList.remove('burger-active');
+    });
+});
 
 // ФОРМА
 const form = document.forms['form'];
